@@ -42,220 +42,21 @@
   }
 }
 
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 110vh;
-  background: rgba(39, 39, 39, 0.4);
-}
-.nav {
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  height: 100px;
-  line-height: 100px;
-  background: linear-gradient(rgba(39, 39, 39, 0.6), transparent);
-  z-index: 100;
-}
-.nav-logo p {
-  color: white;
-  font-size: 25px;
-  font-weight: 600;
-}
-.nav-menu ul {
-  display: flex;
-}
-.nav-menu ul li {
-  list-style-type: none;
-}
-.nav-menu ul li .link {
-  text-decoration: none;
-  font-weight: 500;
-  color: #fff;
-  padding-bottom: 15px;
-  margin: 0 25px;
-}
-.link:hover,
-.active {
-  border-bottom: 2px solid #fff;
-}
 
-/*----------- BUTTONS in Login and Sign---------------*/
 
-.nav-button .btn {
-  width: 130px;
-  height: 40px;
-  font-weight: 500;
-  background: rgba(255, 255, 255, 0.4);
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-.btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-#registerBtn {
-  margin-left: 15px;
-}
-.btn.white-btn {
-  background: rgba(255, 255, 255, 0.7);
-}
-.btn.btn.white-btn:hover {
-  background: rgba(58, 57, 59, 0.5);
-}
-.nav-menu-btn {
-  display: none;
-}
-.form-box {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 512px;
-  height: 420px;
-  overflow: hidden;
-  z-index: 2;
-}
-.login-container {
-  position: absolute;
-  left: 4px;
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  transition: 0.5s ease-in-out;
-}
-.register-container {
-  position: absolute;
-  right: -520px;
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  transition: 0.5s ease-in-out;
-}
-.top span {
-  color: #fff;
-  font-size: small;
-  padding: 10px 0;
-  display: flex;
-  justify-content: center;
-}
-.top span a {
-  font-weight: 500;
-  color: #fff;
-  margin-left: 5px;
-}
-header {
-  color: #fff;
-  font-size: 30px;
-  text-align: center;
-  padding: 10px 0 30px 0;
-}
-.two-forms {
-  display: flex;
-  gap: 10px;
-}
-.input-field {
-  font-size: 15px;
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  height: 50px;
-  width: 100%;
-  padding: 0 10px 0 45px;
-  border: none;
-  border-radius: 30px;
-  outline: none;
-  transition: 0.2s ease;
-}
-.input-field:hover,
-.input-field:focus {
-  background: rgba(255, 255, 255, 0.25);
-}
-::-webkit-input-placeholder {
-  color: #fff;
-}
-.input-box i {
-  position: relative;
-  top: -35px;
-  left: 17px;
-  color: #fff;
-}
-.submit {
-  font-size: 15px;
-  font-weight: 500;
-  color: black;
-  height: 45px;
-  width: 100%;
-  border: none;
-  border-radius: 30px;
-  outline: none;
-  background: rgba(255, 255, 255, 0.7);
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-.submit:hover {
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
-}
-.two-col {
-  display: flex;
-  justify-content: space-between;
-  color: #fff;
-  font-size: small;
-  margin-top: 10px;
-}
-.two-col .one {
-  display: flex;
-  gap: 5px;
-}
-.two label a {
-  text-decoration: none;
-  color: #fff;
-}
-.two label a:hover {
-  text-decoration: underline;
-}
-@media only screen and (max-width: 786px) {
-  .nav-button {
-    display: none;
-  }
-  .nav-menu.responsive {
-    top: 100px;
-  }
-  .nav-menu {
-    position: absolute;
-    top: -800px;
-    display: flex;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.2);
-    width: 100%;
-    height: 90vh;
-    backdrop-filter: blur(20px);
-    transition: 0.3s;
-  }
-  .nav-menu ul {
-    flex-direction: column;
-    text-align: center;
-  }
-  .nav-menu-btn {
-    display: block;
-  }
-  .nav-menu-btn i {
-    font-size: 25px;
-    color: #4c4a60;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .nav-menu-btn i:hover {
-    background: rgba(255, 255, 255, 0.15);
-  }
-}
+
+
+
+
+
+ 
+ 
+  
+  
+  
+ 
+ 
+
 @media only screen and (max-width: 540px) {
   .wrapper {
     min-height: 100vh;
@@ -410,50 +211,8 @@ button {
   }
 }
 
-/* Portfolio Section Base */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
 
-/* Skill Card Styling */
-.skill {
-  background-color: #f5f5f5; /* Light background color for cards */
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
 
-.skill:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
-}
-
-/* Image Container */
-.card-custom-image {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.card-custom-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.card-custom-image:hover img {
-  transform: scale(1.1); /* Image zoom effect on hover */
-}
-
-/* Image Link */
-.image-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
 
 /* Portfolio Title and Description */
 .skill h4 {
@@ -495,3 +254,81 @@ button {
     font-size: 0.85rem;
   }
 }
+
+/* --------------------General Reset------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card Style */
+.profile-card {
+  text-align: center;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transform: translate(50%, 80%);
+}
+
+.navigation a {
+  position: relative;
+  font-size: 1.1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+.logo {
+  font-size: 2em;
+  color: white;
+  user-select: none;
+}
+.logo {
+  font-size: 2em;
+  color: white;
+  user-select: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+

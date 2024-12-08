@@ -40,40 +40,29 @@
     <link href="assets/css/home.css" rel="stylesheet" />
     <title>Home</title>
   </head>
+   <header>
+      <h2 class="logo">Easy Comute</h2>
+      <nav class="navigation">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="#">Settings</a>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+     
+    </header>
+           
   <body>
-    <body>
-        <div class="wrapper">
-            <nav class="nav">
-                <div class="nav-logo">
-                    <p>EASY COMMUTE</p>
-                </div>
-                <div class="nav-menu" id="navMenu">
-                    <ul>
-                       <li><a href="#" class="link active"></a></li>
-                       <li><a href="#" class="link"></a></li> 
-                       <li><a href="#" class="link"></a></li>
-                       <li><a href="#" class="link"></a></li>
-                        
-                        
-                    </ul>
-                </div>
-               
-            </nav>
-            <!----------------------------- Form box ----------------------------------->    
-    <div class="form-box">
-        
+    
+   
         <!------------------- login form -------------------------->
 
-        <div class="login-container" id="login">
+        <div class="login-container">
             <div class="top">
-                <span>Would you like to report any concerns with your ride?? <a href="#" onclick="register()">Report Section</a></span>
-                
-            </div>
-           
-          
+                </div>
            
             <div class="btn-conteiner">
-              <a class="btn-content" href="#">
+              <a class="btn-content" href="ride.html">
                 <span class="btn-title" onclick="window.location.href='ride.html'">RIDE</span>
 
                 <span class="icon-arrow">
@@ -89,8 +78,8 @@
             </div>
 
             <div class="btn-conteiner">
-                <a class="btn-content" href="#">
-                  <span class="btn-title">REPORT</span>
+                <a class="btn-content" href="complaint.html">
+                  <span class="btn-title">COMPLAINTS</span>
                   <span class="icon-arrow">
                     <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                       <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -104,7 +93,7 @@
               </div>
 
               <div class="btn-conteiner">
-                <a class="btn-content" href="#">
+                <a class="btn-content" href="index.html">
                   <span class="btn-title">EXIT</span>
                   <span class="icon-arrow">
                     <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -121,10 +110,12 @@
            
         </div>
         <video autoplay muted loop id="background-video">
-            <source src="assets/img/RIDING.mp4" type="video/mp4">
+            <source src="assets/img/blue bg.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
 
+
+ 
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

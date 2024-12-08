@@ -7,6 +7,239 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-position: center;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+.logo {
+  font-size: 2em;
+  color: white;
+  user-select: none;
+}
+.navigation a {
+  position: relative;
+  font-size: 1.1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.btnLogin-popup {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: white;
+  font-weight: 500;
+  margin-left: 40px;
+  transition: 0.5s;
+}
+.btnLogin-popup:hover {
+  background: #fff;
+  color: #162938;
+}
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform 0.5s ease, height 0.2s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+.wrapper.active-popup {
+  display: flex;
+  transform: scale(1);
+}
+
+.wrapper.active {
+  height: 520px;
+}
+
+.wrapper .form-box {
+  width: 100%;
+  padding: 40px;
+  transition: transform 0.3s ease;
+}
+
+.wrapper .form-box.login {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.wrapper .icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: #162938;
+  font-size: 2em;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+.form-box h2 {
+  font-size: 2em;
+  color: #bdbbbb;
+  text-align: center;
+}
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #162938;
+  margin: 30px 0;
+}
+.input-box label {
+  position: absolute;
+  top: 50px;
+  left: 5px;
+  transform: translateY(-90%);
+  font-size: 1em;
+  color: #bdbbbb;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #162938;
+  font-weight: 600;
+  padding: 0 35px 0;
+}
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: #162938;
+  line-height: 57px;
+}
+.remember-forgot {
+  font-size: 0.9em;
+  color: #162938;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.remember-forgot label input {
+  accent-color: #162938;
+  margin-right: 3px;
+}
+.remember-forgot a {
+  color: #162938;
+  text-decoration: none;
+}
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #162938;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}
+.login-register {
+  font-size: 0.9em;
+  color: #162938;
+  font-weight: 500;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+.login-register p a {
+  color: #162938;
+  text-decoration: none;
+  font-weight: 600;
+}
+.login-register p a:hover {
+  text-decoration: underline;
+}
+
 /* Ensure the video takes up the entire viewport */
 #background-video {
   position: fixed;
@@ -29,301 +262,4 @@
   #background-video {
     object-fit: cover; /* Ensures the video covers the screen */
   }
-}
-
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 110vh;
-  background: rgba(39, 39, 39, 0.4);
-  position: relative;
-  z-index: 1; /* Make sure content is above the video */
-  padding: 0 20px;
-}
-.nav {
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  height: 100px;
-  line-height: 100px;
-  background: linear-gradient(rgba(39, 39, 39, 0.6), transparent);
-  z-index: 100;
-}
-.nav-logo p {
-  color: white;
-  font-size: 25px;
-  font-weight: 600;
-}
-.nav-menu ul {
-  display: flex;
-}
-.nav-menu ul li {
-  list-style-type: none;
-}
-.nav-menu ul li .link {
-  text-decoration: none;
-  font-weight: 500;
-  color: #fff;
-  padding-bottom: 15px;
-  margin: 0 25px;
-}
-.link:hover,
-.active {
-  border-bottom: 2px solid #fff;
-}
-/*----------- BUTTONS in Login and Signup---------------*/
-
-.nav-button .btn {
-  width: 130px;
-  height: 40px;
-  font-weight: 500;
-  background: rgba(255, 255, 255, 0.4);
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-.btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-#registerBtn {
-  margin-left: 15px;
-}
-.btn.white-btn {
-  background: rgba(255, 255, 255, 0.7);
-}
-.btn.btn.white-btn:hover {
-  background: rgba(58, 57, 59, 0.5);
-}
-.nav-menu-btn {
-  display: none;
-}
-.form-box {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 512px;
-  height: 420px;
-  overflow: hidden;
-  z-index: 2;
-}
-.login-container {
-  position: absolute;
-  left: 4px;
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  transition: 0.5s ease-in-out;
-}
-.register-container {
-  position: absolute;
-  right: -520px;
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  transition: 0.5s ease-in-out;
-}
-.top span {
-  color: #fff;
-  font-size: small;
-  padding: 10px 0;
-  display: flex;
-  justify-content: center;
-}
-.top span a {
-  font-weight: 500;
-  color: #fff;
-  margin-left: 5px;
-}
-header {
-  color: #fff;
-  font-size: 30px;
-  text-align: center;
-  padding: 10px 0 30px 0;
-}
-.two-forms {
-  display: flex;
-  gap: 10px;
-}
-.input-field {
-  font-size: 15px;
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  height: 50px;
-  width: 100%;
-  padding: 0 10px 0 45px;
-  border: none;
-  border-radius: 30px;
-  outline: none;
-  transition: 0.2s ease;
-}
-.input-field:hover,
-.input-field:focus {
-  background: rgba(255, 255, 255, 0.25);
-}
-::-webkit-input-placeholder {
-  color: #fff;
-}
-.input-box i {
-  position: relative;
-  top: -35px;
-  left: 17px;
-  color: #fff;
-}
-.submit {
-  font-size: 15px;
-  font-weight: 500;
-  color: black;
-  height: 45px;
-  width: 100%;
-  border: none;
-  border-radius: 30px;
-  outline: none;
-  background: rgba(255, 255, 255, 0.7);
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-.submit:hover {
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
-}
-.two-col {
-  display: flex;
-  justify-content: space-between;
-  color: #fff;
-  font-size: small;
-  margin-top: 10px;
-}
-.two-col .one {
-  display: flex;
-  gap: 5px;
-}
-.two label a {
-  text-decoration: none;
-  color: #fff;
-}
-.two label a:hover {
-  text-decoration: underline;
-}
-@media only screen and (max-width: 786px) {
-  .nav-button {
-    display: none;
-  }
-  .nav-menu.responsive {
-    top: 100px;
-  }
-  .nav-menu {
-    position: absolute;
-    top: -800px;
-    display: flex;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.2);
-    width: 100%;
-    height: 90vh;
-    backdrop-filter: blur(20px);
-    transition: 0.3s;
-  }
-  .nav-menu ul {
-    flex-direction: column;
-    text-align: center;
-  }
-  .nav-menu-btn {
-    display: block;
-  }
-  .nav-menu-btn i {
-    font-size: 25px;
-    color: #4c4a60;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .nav-menu-btn i:hover {
-    background: rgba(255, 255, 255, 0.15);
-  }
-}
-@media only screen and (max-width: 540px) {
-  .wrapper {
-    min-height: 100vh;
-  }
-  .form-box {
-    width: 100%;
-    height: 500px;
-  }
-  .register-container,
-  .login-container {
-    width: 100%;
-    padding: 0 20px;
-  }
-  .register-container .two-forms {
-    flex-direction: column;
-    gap: 0;
-  }
-}
-
-button {
-  padding: 10px 20px;
-  text-transform: uppercase;
-  border-radius: 8px;
-  font-size: 17px;
-  font-weight: 500;
-  color: #ffffff80;
-  text-shadow: none;
-  background: transparent;
-  cursor: pointer;
-  box-shadow: transparent;
-  border: 1.5px solid #ffffff80;
-  transition: 1.5s ease;
-  user-select: none;
-}
-
-#btn:hover,
-:focus {
-  color: #ffffff;
-  background: #1f2121;
-  border: 1px solid #535658;
-  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-}
-
-a:hover {
-  color: var(--color-base3);
-}
-
-/*--Images-- */
-img {
-  width: 100%;
-}
-
-/* General Layout */
-.full-height {
-  min-height: 100vh;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding-top: 80px;
-  padding-bottom: 60px;
-  border-bottom: 2px solid rgba(172, 17, 17, 0.1);
-}
-
-/* Text Branding */
-.text-brand {
-  color: var(--color-base3);
-}
-
-/* Background Colors */
-.bg-base {
-  background: var(--color-heading);
-}
-/*----------------------  Shadow and Animation Effects ---------------------- */
-.shadow-effect {
-  transition: all 0.5s;
-}
-.shadow-effect:hover {
-  box-shadow: -6px 6px 0 8px var(--color-base3);
 }
